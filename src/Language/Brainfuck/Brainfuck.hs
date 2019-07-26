@@ -1,6 +1,5 @@
 module Language.Brainfuck.Brainfuck
     ( Brainfuck
-    , runBrainfuck
     , execBrainfuck
     , inc
     , dec
@@ -18,9 +17,6 @@ import Language.Brainfuck.BrainfuckOperator
 
 
 type Brainfuck a = Writer [BrainfuckOperator] a
-
-runBrainfuck :: Brainfuck a -> (a, [BrainfuckOperator])
-runBrainfuck = runWriter
 
 execBrainfuck :: Brainfuck a -> [BrainfuckOperator]
 execBrainfuck = execWriter
