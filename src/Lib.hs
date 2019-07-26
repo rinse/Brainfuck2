@@ -5,11 +5,6 @@ module Lib
 import Control.Monad
 import Control.Monad.State
 import Language.Brainfuck
-import Language.BrainfuckVM
-
-
-runBrainfuck' :: Brainfuck () -> IO ()
-runBrainfuck' = runBrainfuckVM . compileBrainfuck
 
 helloWorld :: Brainfuck ()
 helloWorld = do
@@ -46,7 +41,7 @@ helloWorld = do
 
 someFunc :: IO ()
 someFunc = do
-  runBrainfuck' $ readBrainfuck "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
-  runBrainfuck' helloWorld
+  runBrainfuck $ readBrainfuck "++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++."
+  runBrainfuck helloWorld
   print $ showBrainfuck helloWorld
 

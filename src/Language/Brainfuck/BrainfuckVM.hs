@@ -1,4 +1,4 @@
-module Language.BrainfuckVM
+module Language.Brainfuck.BrainfuckVM
     ( BrainfuckVM
     , compileBrainfuck
     , runBrainfuckVM
@@ -8,8 +8,8 @@ import Control.Monad
 import Control.Monad.State
 import Data.Char (chr, ord)
 import Data.Zipper
-import Language.Brainfuck
-import Language.BrainfuckOperator
+import Language.Brainfuck.Brainfuck
+import Language.Brainfuck.BrainfuckOperator
 
 
 getCur :: Zipper a -> a

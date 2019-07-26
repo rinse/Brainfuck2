@@ -1,4 +1,4 @@
-module Language.BrainfuckOperator
+module Language.Brainfuck.BrainfuckOperator
     ( BrainfuckOperator (..)
     , showBfops
     , readBfops

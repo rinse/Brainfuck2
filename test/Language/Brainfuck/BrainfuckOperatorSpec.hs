@@ -1,7 +1,7 @@
-module Language.BrainfuckOperatorSpec (spec) where
+module Language.Brainfuck.BrainfuckOperatorSpec (spec) where
 
 import Test.Hspec
-import Language.BrainfuckOperator
+import Language.Brainfuck.BrainfuckOperator
 
 spec :: Spec
 spec = do
